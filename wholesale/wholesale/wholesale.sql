@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2018 at 01:12 AM
+-- Generation Time: Nov 09, 2018 at 06:23 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -35,13 +35,6 @@ CREATE TABLE `cart` (
   `price` int(11) NOT NULL,
   `customer_id` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`product_id`, `product_name`, `quantity`, `price`, `customer_id`) VALUES
-(1, 'Coca Cola', 5, 200, 'nikhil');
 
 -- --------------------------------------------------------
 
@@ -105,12 +98,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_name`, `category_id`, `price`, `quantity`) VALUES
-(1, 'Coca Cola', 1, 40, 35),
-(2, 'Pepsi', 1, 35, 80),
-(3, 'Maaza', 1, 35, 50),
-(4, 'Sprite', 1, 20, 30),
+(1, 'Coca Cola', 1, 40, 95),
+(2, 'Pepsi', 1, 35, 100),
+(3, 'Maaza', 1, 35, 100),
+(4, 'Sprite', 1, 20, 100),
 (5, 'Good Day', 2, 20, 100),
-(6, 'Unibic', 2, 30, 100),
+(6, 'Unibic', 2, 30, 70),
 (7, 'Hide n Seek', 2, 20, 100),
 (8, 'Oreo', 2, 40, 100),
 (9, 'Bingo Mad Angles', 3, 10, 100),
@@ -161,7 +154,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
