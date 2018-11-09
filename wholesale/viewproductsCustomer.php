@@ -26,6 +26,7 @@
 		<button onclick="location.href='viewProductsCustomer.php'">View Products</button>
 		<button onclick="location.href='order.php'">Order</button>
 		<button onclick="location.href='cart.php'">Cart</button>
+		<button onclick="location.href='customerViewTransactions.php'">My Transactions</button>
 		<button onclick="location.href='logout.php'">Logout</button>
 	</div>
 <div class='container'>

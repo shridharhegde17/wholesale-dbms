@@ -23,7 +23,8 @@
 	<div class='sidebar'>
 		<button onclick="location.href='adminHome.php'">Home</button>
 		<button onclick="location.href='viewProducts.php'">View Products</button>
-		<button onclick="location.href='addProduct.php'">Add Product</button>
+		<button onclick="location.href='addStock.php'">Add Stock</button>
+		<button onclick="location.href='addProduct.php'">Add New Product</button>
 		<button onclick="location.href='customers.php'">Customers</button>
 		<button onclick="location.href='transactions.php'">Transactions</button>
 		<button onclick="location.href='logout.php'">Logout</button>

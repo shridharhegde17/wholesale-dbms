@@ -11,7 +11,7 @@
 <head>
 	<link rel='stylesheet' href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<title>View Products</title>
+	<title>Add Stock</title>
 
 
 </head> 
@@ -56,10 +56,16 @@
 				while($row=mysqli_fetch_assoc($result)){
 					echo "<tr><td>".$row['product_id']."</td><td>".$row['product_name']."</td><td>".$row['price']."</td><td>".$row['quantity']."</td></tr>";
 				}
-				echo "</table></fieldset><br>";
+				echo "</table>
+		    <form action='updateStock.php' method='get'>
+		    	<input class='formInputItem' type=text name='productID' placeholder='Enter Product ID' required><input class='formInputItem' type=text name='quantity' placeholder='Enter Quantity' required><input class='goBtn' type=submit name='submit' value='Update Stock'>
+		    </form>
+		</fieldset><br>";
+				
 			}
+			
 		?>
-	
+		
 
 
 

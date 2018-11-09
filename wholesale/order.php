@@ -12,7 +12,7 @@
 <head>
 	<link rel='stylesheet' href="css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<title>View Products</title>
+	<title>Order</title>
 
 
 </head> 
@@ -26,6 +26,7 @@
 		<button onclick="location.href='viewProductsCustomer.php'">View Products</button>
 		<button onclick="location.href='order.php'">Order</button>
 		<button onclick="location.href='cart.php'">Cart</button>
+		<button onclick="location.href='customerViewTransactions.php'">My Transactions</button>
 		<button onclick="location.href='logout.php'">Logout</button>
 	</div>
 <div class='container'>
