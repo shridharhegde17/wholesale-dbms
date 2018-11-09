@@ -1,0 +1,205 @@
+.topStyle{
+	top:0;
+	padding:10px;
+	position:fixed;
+	left:0;
+	height:70px;
+	width:100%;
+	background-color: #303030;
+	z-index: 3;
+}
+.sidebar{
+	display: block;
+	position:fixed;
+	margin-top:70px;
+	top:20px;
+	left:0;
+	padding-top:15px;
+	width:200px;
+	height:100%;
+	background-color: #a6abb2;
+}
+.container{
+	position:absolute;
+	margin-top: 70px;
+	margin-left:200px;
+	margin-right:0;
+	padding: 30px 20px 20px 20px;
+	z-index: 1;
+}
+.container form{
+	line-height: 2em;
+	display: block;
+}
+.container table{
+	text-align:left;
+	font-style:normal;
+}
+.container table td{
+	vertical-align:top;
+}
+.container table tr:nth-child(odd){
+	background-color: #a3a5a8;
+}
+.container table tr:nth-child(even){
+	background-color: #e0e3e5;
+}
+.container table th{
+	min-width:13em;
+	color:#fcfcfc;
+	background-color: #303030;
+}
+.container .tableLarge th{
+	min-width: 8em;
+}
+.container .tableLarge td:nth-child(6){
+	font-size: 15px;
+}
+.container fieldset{
+	min-height: 200px;
+	min-width:30em;
+	font-size: 20px;
+	font-style:italic;
+	line-height: 1.7em;
+	border-left:none;
+	border-right:none;
+	border-bottom:none;
+}
+.container fieldset legend{
+	font-size: 25px;
+	color:brown;
+	font-style:normal;
+}
+.container fieldset p{
+	white-space: pre-wrap;
+}
+.sidebar button{
+	text-decoration: none;
+	border:none;
+	background-color: #303030;
+	padding:10px;
+	height:20px auto;
+	font-size: 20px;
+	cursor:pointer;
+	width:200px;
+	margin-bottom:15px;
+	color:white;
+}
+.sidebar button:hover{
+	background-color:#7a7a7a;
+}
+.sidebar button:active{
+	background-color: #303030;
+}
+#createAccount{
+	top:30px;
+	right:5%;
+	position:absolute;
+}
+#logoutButton{
+	top:30px;
+	right:5%;
+	position:absolute;
+}
+.userNameDisplay{
+	top:30px;
+	right:5%;
+	position:absolute;
+	color:white;
+	font-style:italic;
+	font-size: 30px;
+}
+#userLogin{
+	top:30px;
+	right:20%;
+	position:absolute;
+}
+.btn{
+	text-decoration: none;
+	border:none;
+	background-color: #e3e5ea;
+	padding:10px;
+	height:20px auto;
+	width:50px auto;
+	font-size: 20px;
+	cursor:pointer;
+}
+.btn:hover{
+	background-color:#c9ccd3;
+	box-shadow: 2px 2px 0px #303030;
+	
+}
+.btn:active{
+	background-color: #e3e5ea;
+}
+body{
+	top:0;
+	left:0;
+	background-color: #fcfcfc;
+	font-family:sans-serif;
+	line-height: 1.5em;
+}
+.loginBody{
+	top:0;
+	left:0;
+	font-family:sans-serif;
+	line-height: 1.5em;
+	background-color: #a6abb2;
+}
+.mybox{
+	position:absolute;
+	top:25%;
+	left:35%;
+	height:300px auto;
+	padding: 50px;
+	text-align: center;
+	background-color: #fcfcfc;
+	box-shadow: 3px 3px 0px #303030;
+}
+.inputItem{
+	display:block;
+	padding:3px;
+	height:30px;
+	width:250px;
+	border:0px;
+	border-radius: 2px;
+	background-color:#e3e5ea; 
+}
+.formInputItem{
+	padding:3px;
+	width:250px;
+	border:0px;
+	border-radius: 2px;
+	background-color:#e3e5ea;
+	display: inline-block;
+	height:40px;
+	margin-top:10px;
+	margin-right: 5px;
+}
+.goBtn{
+	min-width:6.5em;
+	height:3.5em;
+	border:none;
+	background-color: #303030;
+	color:white;
+	cursor:pointer;
+}
+label {
+  display: inline-block;
+  width: 140px;
+}
+textarea{
+	resize:none;
+	vertical-align: top;
+	font-family: sans-serif;
+	padding:3px;
+	width:250px;
+	border:0px;
+	border-radius: 2px;
+	background-color:#e3e5ea;
+	display: inline-block;
+	height:120px;
+	margin-top:10px;
+	margin-right: 5px;
+
+}
