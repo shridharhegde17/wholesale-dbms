@@ -27,6 +27,7 @@
 		<button onclick="location.href='viewProductsCustomer.php'">View Products</button>
 		<button onclick="location.href='order.php'">Order</button>
 		<button onclick="location.href='cart.php'">Cart</button>
+		<button onclick="location.href='customerViewTransactions.php'">My Transactions</button>
 		<button onclick="location.href='logout.php'">Logout</button>
 	</div>
 <div class='container'>
@@ -49,11 +50,11 @@
 			$phone=$_GET['phone'];
 			$payment=$_GET['payment'];
 			$custID=$_SESSION['loginUser'];
-			$sql="insert into transaction(transaction_amount,customer_id,phone,address,payment) values('$totalPrice','$custID','$phone','$address','$payment')";
+			$sql="insert into transaction(transaction_amount,customer_id,phone,address,payment,date) values('$totalPrice','$custID','$phone','$address','$payment',current_date())";
 			$result=mysqli_query($conn,$sql);
 			$sql="delete from cart where customer_id='$custID'";
 			$result=mysqli_query($conn,$sql);
-			echo "<script>alert('Order placed.\\nThe products will be delivered within 5 hours.".$totalPrice."');</script>";
+			echo "<script>alert('Order placed.\\nThe products will be delivered within 5 hours.');</script>";
 			header("refresh:0;url=order.php");
 		}
 		else{

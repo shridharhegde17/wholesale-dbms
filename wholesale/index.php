@@ -1,0 +1,13 @@
+<?php
+	session_start();
+	if(!isset($_SESSION['loginUser'])){
+		header("Location:loginPage.php");
+	}else{
+		if($_SESSION['loginUser']=='shridhar'){
+			header("Location:adminHome.php");
+		}
+		else{
+			header("Location:customerHome.php");
+		}
+	}
+?>

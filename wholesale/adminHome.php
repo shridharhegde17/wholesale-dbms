@@ -25,6 +25,7 @@
 		<button onclick="location.href='viewProducts.php'">View Products</button>
 		<button onclick="location.href='addStock.php'">Add Stock</button>
 		<button onclick="location.href='addProduct.php'">Add New Product</button>
+		<button onclick="location.href='depleted.php'">Depleted Products</button>
 		<button onclick="location.href='customers.php'">Customers</button>
 		<button onclick="location.href='transactions.php'">Transactions</button>
 		<button onclick="location.href='logout.php'">Logout</button>
@@ -33,7 +34,10 @@
 
 	<fieldset><legend><b>You can</b></legend>
 <p>- View Products
-- Add Product
+- Update Stock
+- Add New Product
+- View Depleted Products
+- View Customers
 - View Transactions
 </p>
 </fieldset>

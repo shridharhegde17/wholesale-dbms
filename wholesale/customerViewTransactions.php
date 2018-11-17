@@ -32,14 +32,14 @@
 	<div class='container'>
 
 	<fieldset><legend><b>My Transactions</b></legend>
-		<table class='tableLarge'><tr><th>Transaction ID</th><th>Amount</th><th>Payment Mode</th><th>Phone</th><th>Address</th></tr>
+		<table class='tableLarge'><tr><th>Transaction ID</th><th>Amount</th><th>Payment Mode</th><th>Phone</th><th>Address</th><th>Date</th></tr>
 		<?php 
 			$conn=mysqli_connect("localhost","root","","wholesale");
 			$curUser=$_SESSION['loginUser'];
 			$sql="select * from transaction where customer_id='$curUser'";
 			$result=mysqli_query($conn,$sql);
 			while($row=mysqli_fetch_assoc($result)){
-				echo "<tr><td>".$row['transaction_id']."</td><td>".$row['transaction_amount']."</td><td>".$row['payment']."</td><td>".$row['phone']."</td><td>".$row['address']."</td></tr>";
+				echo "<tr><td>".$row['transaction_id']."</td><td>".$row['transaction_amount']."</td><td>".$row['payment']."</td><td>".$row['phone']."</td><td style='font-size: 15px;'>".$row['address']."</td><td>".$row['date']."</td></tr>";
 			}
 			echo "</table><br>";
 		?>

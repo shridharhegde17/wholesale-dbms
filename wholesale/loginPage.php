@@ -19,7 +19,7 @@
 		<div id="userPrompt" style="display:block;">
 			<form method='post' action='login.php'>
 				<h3>Login</h3>
-				<input class="inputItem" type=text name='user' placeholder="Username" required ><br><input class="inputItem" type=password name='pass' placeholder="Password" required><br><input type="submit" value="Login" class="btn">
+				<input class="inputItem" type=text name='user' placeholder="Username" required><br><input class="inputItem" type=password name='pass' placeholder="Password" required><br><input type="submit" value="Login" class="btn">
 			</form>	
 		</div>
 		<div id="createAccountPrompt" style="display:none;">

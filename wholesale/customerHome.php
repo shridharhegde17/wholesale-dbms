@@ -36,6 +36,7 @@
 	<fieldset><legend><b>You can</b></legend>
 <p>- View Products
 - Order Products
+-View Transactions
 </p>
 </fieldset>
 
