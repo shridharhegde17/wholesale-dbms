@@ -26,7 +26,7 @@
 					$existQuantity=$row['quantity'];
 					if($existQuantity>0){
 						$newQuantity=$existQuantity+$quantity;
-						$pPrice*=$quantity;
+						$pPrice*=$newQuantity;
 						$sql="update cart set price='$pPrice',quantity='$newQuantity' where product_id='$productID' and customer_id='$curUser'";
 						$result=mysqli_query($conn,$sql);
 					}
