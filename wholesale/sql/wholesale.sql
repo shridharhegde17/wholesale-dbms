@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2018 at 07:11 PM
+-- Generation Time: Mar 28, 2019 at 06:05 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -41,7 +41,6 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`product_id`, `product_name`, `quantity`, `price`, `customer_id`) VALUES
-(1, 'Coca Cola', 200, 8000, 'swamy'),
 (2, 'Pepsi', 71, 2485, 'praveen');
 
 -- --------------------------------------------------------
@@ -94,6 +93,18 @@ INSERT INTO `customer` (`cust_id`, `cust_name`, `email_id`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `depleted_products`
+--
+
+CREATE TABLE `depleted_products` (
+  `product_id` int(11) DEFAULT NULL,
+  `product_name` varchar(20) DEFAULT NULL,
+  `quantity_left` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -123,7 +134,7 @@ INSERT INTO `products` (`product_id`, `product_name`, `category_id`, `price`, `q
 (11, 'Kurkure', 3, 20, 100),
 (12, 'Kurkure Puffcorn', 3, 20, 50),
 (13, 'Parle-G', 2, 10, 50),
-(14, '7-Up', 1, 30, 100),
+(14, '7-Up', 1, 30, 30),
 (15, 'Fanta', 1, 35, 100),
 (16, 'Mirinda', 1, 30, 80),
 (17, 'Mountain Dew', 1, 40, 1000);
@@ -145,6 +156,29 @@ end if;
 END
 $$
 DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaction`
+--
+
+CREATE TABLE `transaction` (
+  `transaction_id` int(11) NOT NULL,
+  `customer_id` varchar(20) DEFAULT NULL,
+  `transaction_amount` int(11) DEFAULT NULL,
+  `payment` varchar(20) DEFAULT NULL,
+  `phone` varchar(10) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `date` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaction`
+--
+
+INSERT INTO `transaction` (`transaction_id`, `customer_id`, `transaction_amount`, `payment`, `phone`, `address`, `date`) VALUES
+(0, 'swamy', 600, 'COD', '8787', 'sdsd', '2019-03-28');
 
 --
 -- Indexes for dumped tables
@@ -176,6 +210,12 @@ ALTER TABLE `customer`
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
   ADD KEY `category_id` (`category_id`);
+
+--
+-- Indexes for table `transaction`
+--
+ALTER TABLE `transaction`
+  ADD PRIMARY KEY (`transaction_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
